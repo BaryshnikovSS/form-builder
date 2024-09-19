@@ -68,12 +68,14 @@ export const FormBuilder = ({
             <DragItem type='input'>Input</DragItem>
             {/* <DragItem type='checkbox'>Checkbox</DragItem>
             <DragItem type='radio'>Radio</DragItem> */}
-            <Button
-              variant='outlined'
-              onClick={handleDownload}
-            >
-              Download JSON
-            </Button>
+            {formElements.length > 0 && (
+              <Button
+                variant='outlined'
+                onClick={handleDownload}
+              >
+                Download JSON
+              </Button>
+            )}
           </div>
         </div>
       </DndProvider>
